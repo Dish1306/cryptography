@@ -8,7 +8,7 @@ cache:
         - $HOME/.cache/pip
         - $HOME/ossl-2/
 
-# Only build master, the version branches (e.g. 1.7.x), and
+# Only build master, the version branches (e.g. 1.7.x), andn
 # version tags (which are apparently considered branches by travis)
 branches:
     only:
