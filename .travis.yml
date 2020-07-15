@@ -38,10 +38,10 @@ matrix:
           arch: arm64
           env: TOXENV=pypy3-nocoverage
         - python: 2.7
-          arch: arm64
+          arch: amd64
           env: TOXENV=py27 OPENSSL=1.1.0l
         - python: 2.7
-          arch: arm64
+          arch: amd64
           env: TOXENV=py27-ssh OPENSSL=1.1.0l
         - python: 3.8
           arch: arm64
