@@ -6,8 +6,9 @@ platform:
 
 steps:
 - name: test
-  image: python
+  image: python:3.8
   commands:
-  - export DOWNSTREAM="twisted OPENSSL=1.1.1g"
+  - export TOXENV="py38"
+  - export DOCKER="pyca/cryptography-runner-bullseye"
   - ./.travis/install.sh
   - ./.travis/run.sh
