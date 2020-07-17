@@ -8,5 +8,6 @@ steps:
 - name: test
   image: python:3.7
   commands:
+  - export DOWNSTREAM="twisted"
   - ./.travis/install.sh
   - ./.travis/run.sh
