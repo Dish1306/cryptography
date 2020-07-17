@@ -8,5 +8,5 @@ steps:
 - name: test
   image: python
   commands:
-  - pip install -r dev-requirements.txt
-  - pytest
+  - ./.travis/install.sh
+  - ./.travis/run.sh
