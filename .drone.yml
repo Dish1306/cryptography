@@ -13,5 +13,4 @@ steps:
   - cd pyopenssl
   - git rev-parse HEAD
   - pip install -e ".[test]"
-  - cd pyopenssl
   - pytest tests
