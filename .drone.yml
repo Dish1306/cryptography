@@ -16,6 +16,6 @@ steps:
     BINSTAR_TOKEN:
       from_secret: BINSTAR_TOKEN
   commands:
-    - ./.travis/install.sh
-    - ./.travis/run.sh
+    - /opt/docker/bin/entrypoint ./.travis/install.sh
+    - /opt/docker/bin/entrypoint ./.travis/run.sh
     - echo "Done building"
