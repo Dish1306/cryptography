@@ -8,5 +8,5 @@ steps:
 - name: test
   image: python
   commands:
-  - python setup.py install.sh
+  - pip install -r dev-requirements.txt
   - pytest
