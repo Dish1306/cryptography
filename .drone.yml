@@ -17,7 +17,6 @@ steps:
       from_secret: BINSTAR_TOKEN
   commands:
     - export CI=drone
-    - export GIT_BRANCH="$DRONE_BRANCH"
     - ./.travis/install.sh
     - ./.travis/run.sh
     - ./.travis/upload_coverage.sh
