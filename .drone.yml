@@ -8,6 +8,6 @@ steps:
 - name: test
   image: python:3.8
   commands:
-  - export TOXENV="packaging"
+  - export OPENSSL="1.1.0l"
   - ./.travis/install.sh
   - ./.travis/run.sh
