@@ -6,9 +6,8 @@ platform:
 
 steps:
 - name: test
-  image: python:3.8
+  image: python:3.7
   commands:
-  - export DOWNSTREAM="0"
-  - export OPENSSL="1.1.0l"
+  - export DOWNSTREAM="twisted OPENSSL=1.1.1g"
   - ./.travis/install.sh
   - ./.travis/run.sh
