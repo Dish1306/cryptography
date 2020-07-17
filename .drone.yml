@@ -16,6 +16,13 @@ steps:
     BINSTAR_TOKEN:
       from_secret: BINSTAR_TOKEN
   commands:
-    - /opt/docker/bin/entrypoint .travis/install.sh
-    - /opt/docker/bin/entrypoint .travis/run.sh
+    - export CRYPTOGRAPHY_ROOT="$DRONE_WORKSPACE"
+    - export RECIPE_ROOT="$CRYPTOGARPHY_ROOT/.travis"
+    - export CI=drone
+    - export GIT_BRANCH="$DRONE_BRANCH"
+    - sed -i '$ichown -R conda:conda "$CRYPTOGRAPHY_ROOT"' /opt/docker/bin/entrypoint
+    - /opt/docker/bin/entrypoint $CRYPTOGRAPHY_ROOT/.travis/install.sh
+    - /opt/docker/bin/entrypoint $CRYPTOGRAPHY_ROOT/.travis/run.sh
+    - /opt/docker/bin/entrypoint $CRYPTOGRAPHY_ROOT/.travis/upload_coverage.sh
+    - /opt/docker/bin/
     - echo "Done building"
