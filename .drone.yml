@@ -16,6 +16,7 @@ steps:
     BINSTAR_TOKEN:
       from_secret: BINSTAR_TOKEN
   commands:
+    - sudo apt-get install -y ruby
     - ./.travis/install.sh
     - ./.travis/run.sh
     - ./.travis/upload_coverage.sh
