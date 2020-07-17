@@ -8,6 +8,10 @@ steps:
 - name: test
   image: python:3.7
   commands:
-  - export DOWNSTREAM="twisted"
-  - ./.travis/install.sh
-  - ./.travis/run.sh
+  - pip install -r dev-requirements.txt
+  - git clone --depth=1 https://github.com/pyca/pyopenssl
+  - cd pyopenssl
+  - git rev-parse HEAD
+  - pip install -e ".[test]"
+  - cd pyopenssl
+  - pytest tests
