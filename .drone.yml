@@ -8,6 +8,6 @@ steps:
 - name: test
   image: python
   commands:
-  - export DOWNSTREAM=twisted OPENSSL=1.1.1g
+  - export DOWNSTREAM="twisted OPENSSL=1.1.1g"
   - ./.travis/install.sh
   - ./.travis/run.sh
